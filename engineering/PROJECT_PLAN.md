@@ -13,3 +13,11 @@ Django, DRF, PostgreSQL, Redis, Celery, AI
 
 ## Rule
 Design → Implement → Break → Improve
+
+## Engineering Principles
+
+* Security first (never expose sensitive data)
+* Design before implementation
+* Always think about scaling
+* Validate assumptions by testing
+* Learn by breaking things
