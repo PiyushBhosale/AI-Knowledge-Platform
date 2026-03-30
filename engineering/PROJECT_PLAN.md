@@ -39,3 +39,23 @@ Build a production-grade backend system by April end capable of handling 100 use
 * Edge cases handled
 * Basic scalability considered
 * Security ensured
+
+## Authentication System (Day 4 Completed)
+
+* Implemented login API
+* Token-based authentication setup
+* Protected APIs using permissions
+* Understood request lifecycle and security
+
+## Current System Capabilities
+
+* User registration
+* User login
+* Token generation
+* Protected endpoints
+
+## Next Focus
+
+* Pagination (scalability)
+* Filtering and search
+* Query optimization

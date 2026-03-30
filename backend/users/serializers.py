@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, authenticate
 
 user = get_user_model()
 
@@ -30,4 +30,18 @@ class RegisterSerializer(serializers.ModelSerializer):
     def validate(self, data):
         if data['username'] == data['password']:
             raise serializers.ValidationError("Username and password can't be same")
+        return data
+
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField()
+    password = serializers.CharField()
+
+    def validate(self,data):
+        user = authenticate(
+            username=data['username'],
+            password = data['password']
+        )
+        if not user:
+            raise serializers.ValidationError("invalid credentials")
+        data['user'] = user
         return data

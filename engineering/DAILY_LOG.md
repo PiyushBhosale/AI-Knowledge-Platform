@@ -223,3 +223,52 @@ A well-designed backend system:
 # 🔹 13. One-Line Summary
 
 Serializer improves data handling and security, while scalability must be handled separately through efficient querying and pagination.
+
+
+# Day 4
+
+## What I Learned
+
+* Authentication vs Authorization
+* Token-based authentication system
+* Login flow in backend
+* Serializer validation pipeline
+* Difference between serializer.data and validated_data
+* Request lifecycle in Django (authentication before view)
+
+## What I Built
+
+* Login API using serializer
+* Token generation system
+* Protected API using TokenAuthentication
+* User access control using permission classes
+
+## Issues Faced
+
+* Incorrect serializer type (used ModelSerializer instead of Serializer)
+* Token installation confusion
+* Understanding authentication flow
+
+## Fixes Applied
+
+* Used Serializer for login instead of ModelSerializer
+* Added authtoken correctly from DRF
+* Understood authentication pipeline
+
+## Key Learnings
+
+* Authentication happens before the view layer
+* Serializer is responsible for validation and transformation
+* Tokens act as identity proof instead of sending passwords repeatedly
+* Proper abstraction layers are critical in backend systems
+
+## Security Learnings
+
+* Never send password in every request
+* Tokens must be protected like passwords
+* Token leakage = full account compromise
+
+## System Thinking
+
+* Authentication is part of request lifecycle
+* System bottlenecks propagate from database → backend → network

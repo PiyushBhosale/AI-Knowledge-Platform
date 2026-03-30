@@ -23,3 +23,55 @@ Used incorrect method to create users
 ### Learning
 
 Security is not automatic — must be enforced explicitly
+
+# Failures
+
+## Wrong Serializer Type
+
+### Problem
+
+Used ModelSerializer for login
+
+### Cause
+
+Incorrect abstraction choice
+
+### Impact
+
+System error (missing Meta class)
+
+### Fix
+
+Used normal Serializer
+
+---
+
+## Token Installation Error
+
+### Problem
+
+Tried installing authtoken separately
+
+### Cause
+
+Misunderstanding of package structure
+
+### Fix
+
+Used DRF built-in authtoken module
+
+---
+
+## Authentication Misunderstanding
+
+### Problem
+
+Assumed authentication happens in view
+
+### Cause
+
+Lack of understanding of request lifecycle
+
+### Fix
+
+Learned authentication happens before view
