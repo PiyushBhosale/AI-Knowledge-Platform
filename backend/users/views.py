@@ -7,16 +7,22 @@ from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
-
+from .pagination import UserPagination
 User = get_user_model()
 
 class UserListView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
+
     def get(self,request):
+        username = request.query_params.get("username")
         Users = User.objects.all()
-        serializer = UserSerializer(Users,many=True)
-        return Response(serializer.data)
+        if username:
+            Users = User.objects.get(username=username)
+        Paginator = UserPagination()
+        paginated_user = Paginator.paginate_queryset(Users, request )
+        serializer = UserSerializer(paginated_user,many=True)
+        return Paginator.get_paginated_response(serializer.data)
     
 class RegisterUserView(APIView):
     def post(self,request):
