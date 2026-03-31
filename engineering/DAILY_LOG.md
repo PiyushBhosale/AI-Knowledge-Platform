@@ -272,3 +272,54 @@ Serializer improves data handling and security, while scalability must be handle
 
 * Authentication is part of request lifecycle
 * System bottlenecks propagate from database → backend → network
+
+# Day 5
+
+## What I Learned
+
+* Pagination concept and importance
+* How to limit data per request
+* Filtering using query parameters
+* Difference between exact match and partial search
+* System bottlenecks under high load
+
+## What I Built
+
+* Pagination system for user API
+* Page-based API responses
+* Basic filtering using query params
+
+## Issues Faced
+
+* Understanding where pagination is applied
+* Confusion between backend vs database responsibility
+
+## Fixes Applied
+
+* Learned pagination is applied at DB query level using LIMIT/OFFSET
+* Backend controls pagination logic
+
+## Key Learnings
+
+* Loading all data is not scalable
+* Pagination is essential for performance and memory management
+* Filtering makes APIs flexible and dynamic
+* Exact match queries are faster than partial match queries
+
+## Performance Learnings
+
+* Large page size increases response time and memory usage
+* Partial search (icontains) is slower than exact match
+* System bottlenecks start at database and propagate to backend and network
+
+## System Thinking
+
+* Always design APIs assuming data will grow
+* Performance issues appear under concurrent load
+* Scalability requires controlling data flow
+
+## What Can Break in Future
+
+* Large datasets without pagination → memory crash
+* Heavy queries → slow database
+* Large responses → network latency

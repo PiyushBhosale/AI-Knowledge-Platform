@@ -53,3 +53,43 @@ Client sends request with token
 5. Database Layer
 
    * stores data
+
+# Data Retrieval Architecture
+
+## Request Flow with Pagination
+
+Client Request
+→ Query Parameters (page, filters)
+→ Backend Logic
+→ Database Query (LIMIT, OFFSET)
+→ Serializer
+→ Response
+
+---
+
+## Filtering Flow
+
+Client Request with filters
+→ Backend extracts parameters
+→ Query modified dynamically
+→ Database returns filtered data
+
+---
+
+## System Layers Involved
+
+1. Request Layer
+
+   * receives query params
+
+2. Backend Layer
+
+   * builds query
+
+3. Database Layer
+
+   * executes optimized query
+
+4. Response Layer
+
+   * returns paginated data

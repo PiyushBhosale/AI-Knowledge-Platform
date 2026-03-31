@@ -75,3 +75,44 @@ Lack of understanding of request lifecycle
 ### Fix
 
 Learned authentication happens before view
+
+
+# Failures
+
+## No Pagination Issue
+
+### Problem
+
+API returned all users at once
+
+### Cause
+
+Used .all() without limiting results
+
+### Impact
+
+* high memory usage
+* slow response time
+* poor scalability
+
+### Fix
+
+Implemented pagination
+
+---
+
+## Large Page Size Issue
+
+### Problem
+
+Large data returned in single request
+
+### Impact
+
+* slow API
+* network latency
+* frontend lag
+
+### Learning
+
+Page size must be controlled carefully

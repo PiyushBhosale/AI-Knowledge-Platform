@@ -37,3 +37,44 @@ Separated authentication, validation, and business logic
 
 * scalable system design
 * easier debugging
+
+
+# Optimizations
+
+## Pagination
+
+### Improvement
+
+Limit number of records per request
+
+### Benefit
+
+* reduced memory usage
+* faster response
+* scalable API
+
+---
+
+## Query Filtering
+
+### Improvement
+
+Dynamic query filtering
+
+### Benefit
+
+* flexible APIs
+* reduced unnecessary data transfer
+
+---
+
+## Controlled Data Flow
+
+### Improvement
+
+Avoid returning unnecessary data
+
+### Benefit
+
+* better performance
+* efficient resource usage

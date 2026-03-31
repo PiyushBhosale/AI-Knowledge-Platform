@@ -86,3 +86,40 @@ Store tokens in separate table
 ### Tradeoff
 
 * Additional DB query required
+
+
+# Decisions
+
+## Pagination Strategy
+
+### Decision
+
+Use page-based pagination
+
+### Reason
+
+* Simple to implement
+* Easy for frontend integration
+* Good for moderate scale systems
+
+### Tradeoff
+
+* Not optimal for very large datasets (offset issues)
+
+---
+
+## Filtering Approach
+
+### Decision
+
+Use query parameters for filtering
+
+### Reason
+
+* Flexible API design
+* Easy to extend
+* Dynamic query handling
+
+### Tradeoff
+
+* Can become complex with many filters
