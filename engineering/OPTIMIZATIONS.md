@@ -78,3 +78,44 @@ Avoid returning unnecessary data
 
 * better performance
 * efficient resource usage
+
+
+# Optimizations
+
+## File Handling
+
+### Improvement
+
+Store files in structured directory per user
+
+### Benefit
+
+* Better organization
+* Avoid file conflicts
+* Easier debugging
+
+---
+
+## Serializer Optimization
+
+### Improvement
+
+Use source to fetch related fields (username)
+
+### Benefit
+
+* Cleaner API response
+* Reduced frontend processing
+
+---
+
+## Query Optimization
+
+### Improvement
+
+Filter documents by logged-in user
+
+### Benefit
+
+* Improved security
+* Reduced data load

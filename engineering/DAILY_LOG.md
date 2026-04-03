@@ -323,3 +323,61 @@ Serializer improves data handling and security, while scalability must be handle
 * Large datasets without pagination → memory crash
 * Heavy queries → slow database
 * Large responses → network latency
+
+# Day 6
+
+## What I Learned
+
+* File upload handling in Django
+* Difference between JSON and form-data
+* Serializer read_only_fields usage
+* Customizing serializer output using source
+* Understanding **str** importance
+* API security practices (user isolation)
+
+## What I Built
+
+* Document Upload API
+* Document List API
+* User-specific document filtering
+* File storage system using FileField
+
+## Issues Faced
+
+* Serializer requiring user field
+* File upload errors using JSON
+* Understanding **str** usage
+* Incorrect serializer response usage
+
+## Fixes Applied
+
+* Used read_only_fields for user
+* Switched to form-data for file upload
+* Used serializer.data instead of validated_data
+* Customized serializer for username display
+
+## Key Learnings
+
+* Backend should derive critical data (user, file info)
+* Never trust frontend input
+* Readable data representation is important (**str**)
+* API should return meaningful data (username instead of ID)
+
+## Performance Learnings
+
+* File uploads stored in filesystem, not DB
+* Duplicate file names handled automatically
+* Pagination and filtering improve performance
+
+## Security Learnings
+
+* Never expose all data (use user filtering)
+* Never trust client-provided user ID
+* Token authentication ensures secure access
+
+## What Can Break in Future
+
+* Large number of files → storage issue
+* No caching → slow response
+* No async processing → heavy load
+* DB bottlenecks under high traffic

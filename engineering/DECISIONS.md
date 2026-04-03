@@ -123,3 +123,38 @@ Use query parameters for filtering
 ### Tradeoff
 
 * Can become complex with many filters
+
+
+## File Storage Strategy
+
+### Decision
+
+Use Django FileField with filesystem storage
+
+### Reason
+
+* Simple to implement
+* Works well for small-scale systems (100 users)
+* Easily extendable to cloud storage later
+
+### Tradeoff
+
+* Not ideal for large-scale systems
+* Requires storage management
+
+---
+
+## API Design Decision
+
+### Decision
+
+Return username instead of user ID
+
+### Reason
+
+* Improves frontend usability
+* Reduces additional API calls
+
+### Tradeoff
+
+* Slight increase in response size

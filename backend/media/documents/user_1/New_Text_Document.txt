@@ -1,0 +1,765 @@
+---
+
+# COMPLETE IN-DEPTH ROADMAP
+
+---
+
+## PHASE 1 — FOUNDATION (Months 1-6)
+
+---
+
+### 1. DSA & Problem Solving (3 months)
+
+**Week 1-2: Arrays & Strings**
+- Two pointer technique
+- Sliding window (fixed & variable)
+- Prefix sum
+- Kadane's algorithm
+- Dutch national flag problem
+- String manipulation — reversal, anagram check, palindrome
+- Practice: 15-20 Leetcode easys
+
+**Week 3-4: Hashing**
+- HashMap internals (how hashing works, collision handling)
+- Frequency counting
+- Two sum patterns
+- Group anagrams
+- Subarray sum equals K
+- Practice: 10-15 problems
+
+**Week 5-6: Linked Lists**
+- Singly, doubly, circular
+- Fast & slow pointer (Floyd's cycle detection)
+- Reverse a linked list (iterative + recursive)
+- Merge two sorted lists
+- LRU Cache implementation
+- Practice: 10-12 problems
+
+**Week 7-8: Stacks & Queues**
+- Stack using array & linked list
+- Monotonic stack
+- Next greater element
+- Valid parentheses & variants
+- Min stack
+- Queue using stacks
+- Sliding window maximum (deque)
+- Practice: 12-15 problems
+
+**Week 9-10: Trees**
+- Binary tree traversals (inorder, preorder, postorder — iterative + recursive)
+- Level order traversal (BFS)
+- Height, diameter, balanced check
+- Lowest Common Ancestor
+- Binary Search Tree — insert, delete, validate
+- Serialize/deserialize
+- Practice: 20 problems
+
+**Week 11: Heaps & Priority Queues**
+- Min heap, max heap internals
+- Heap sort
+- Top K elements pattern
+- Merge K sorted lists
+- Median from data stream
+- Practice: 8-10 problems
+
+**Week 12: Graphs**
+- Adjacency list & matrix representation
+- BFS & DFS (iterative + recursive)
+- Connected components
+- Cycle detection (directed & undirected)
+- Topological sort (Kahn's + DFS)
+- Dijkstra's shortest path
+- Union Find (disjoint set)
+- Number of islands, course schedule, clone graph
+- Practice: 20 problems
+
+**Week 13: Dynamic Programming**
+- Memoization vs tabulation
+- 1D DP — climbing stairs, house robber, coin change
+- 2D DP — longest common subsequence, edit distance, unique paths
+- Knapsack (0/1 and unbounded)
+- Longest increasing subsequence
+- DP on strings
+- Practice: 20-25 problems
+
+**Resources:**
+- Neetcode 150 (primary list)
+- Striver's A2Z DSA sheet (supplement)
+- Abdul Bari on YouTube for theory
+- Do NOT just watch — solve then watch explanation
+
+---
+
+### 2. Advanced SQL (1 month)
+
+**Week 1: Joins Deep Dive**
+- INNER, LEFT, RIGHT, FULL OUTER, CROSS
+- Self joins
+- Join on multiple conditions
+- Anti joins (LEFT JOIN WHERE NULL)
+- Performance difference between join types
+
+**Week 2: Window Functions**
+- ROW_NUMBER, RANK, DENSE_RANK
+- LEAD, LAG
+- SUM/AVG/COUNT OVER (PARTITION BY ... ORDER BY ...)
+- NTILE
+- Running totals, moving averages
+- Difference between GROUP BY and PARTITION BY
+
+**Week 3: Query Optimization**
+- EXPLAIN / EXPLAIN ANALYZE
+- Index types — B-tree, hash, GIN, GiST
+- Composite indexes & index ordering
+- Query planner — sequential scan vs index scan
+- N+1 query problem
+- Denormalization tradeoffs
+- Slow query identification
+
+**Week 4: Advanced Concepts**
+- CTEs (Common Table Expressions) & recursive CTEs
+- Subqueries vs joins (when to use which)
+- HAVING vs WHERE
+- COALESCE, CASE WHEN patterns
+- Stored procedures basics
+- Transactions — ACID, isolation levels
+- Deadlocks — what causes them
+
+**Resources:**
+- Leetcode SQL 50
+- Mode Analytics SQL tutorial
+- pgexercises.com
+- Use PostgreSQL locally, not MySQL
+
+---
+
+### 3. Git Deep Dive (2 weeks)
+
+**Week 1:**
+- Git internals — blobs, trees, commits, refs
+- Branching strategies — GitFlow, trunk-based
+- Merge vs rebase (when to use which)
+- Interactive rebase — squash, edit, reorder
+- Cherry-pick
+
+**Week 2:**
+- Stashing — stash, pop, apply, drop
+- Reflog — recovering lost commits
+- Bisect — finding bug-introducing commits
+- Hooks — pre-commit, pre-push
+- .gitignore patterns
+- Resolving merge conflicts properly
+- Tagging — lightweight vs annotated
+
+**Resources:**
+- Pro Git book (free online)
+- Learn Git Branching (interactive site)
+
+---
+
+### 4. Linux & Shell Scripting (1 month)
+
+**Week 1: Linux Fundamentals**
+- File system hierarchy (/etc, /var, /tmp, /home, /opt)
+- File permissions — chmod, chown, umask
+- Users & groups
+- Process management — ps, top, htop, kill, nice
+- Package managers — apt, yum
+
+**Week 2: Essential Commands**
+- grep (with regex), awk, sed, cut, sort, uniq, wc
+- find & xargs
+- piping and redirection (|, >, >>, 2>&1)
+- head, tail, tail -f
+- df, du, free, lsof, netstat/ss
+- tar, gzip, zip
+
+**Week 3: Shell Scripting**
+- Bash syntax — variables, conditionals, loops
+- Functions
+- Command substitution $()
+- Exit codes & error handling
+- Reading files line by line
+- Cron jobs — scheduling
+- Writing deployment scripts
+
+**Week 4: Networking Basics**
+- SSH — keys, config, tunneling
+- curl & wget
+- DNS basics
+- TCP/IP basics — ports, protocols
+- iptables/ufw basics
+- scp, rsync
+
+**Resources:**
+- Linux Command Line (William Shotts — free)
+- OverTheWire Bandit (gamified practice)
+- Just use Linux daily — WSL if on Windows
+
+---
+
+### 5. REST API Design Patterns (2 weeks)
+
+**Week 1:**
+- REST constraints (stateless, cacheable, uniform interface)
+- HTTP methods — GET, POST, PUT, PATCH, DELETE (proper usage)
+- Status codes — know when to use 200, 201, 204, 400, 401, 403, 404, 409, 422, 500
+- URL naming conventions — plural nouns, nesting, filtering
+- Pagination — offset, cursor-based
+- Versioning strategies — URL vs header
+
+**Week 2:**
+- Authentication — session, token, JWT, OAuth2 flow
+- Rate limiting — token bucket, sliding window
+- Idempotency — why PUT is idempotent, POST isn't
+- HATEOAS (know the concept)
+- API documentation — OpenAPI/Swagger
+- Error response structure — consistent format
+- Django REST Framework — serializers, viewsets, permissions, throttling deep dive
+
+**Resources:**
+- Build a complete REST API from scratch in DRF
+- Read Stripe's API docs as gold standard
+
+---
+
+## PHASE 2 — MID-LEVEL JUMP (Months 6-14)
+
+---
+
+### 6. System Design (4 months)
+
+**Month 1: Fundamentals**
+- Client-server architecture
+- Load balancing — round robin, least connections, consistent hashing
+- Horizontal vs vertical scaling
+- CDN — how it works, when to use
+- DNS resolution flow
+- Proxy vs reverse proxy
+- Database replication — master-slave, master-master
+- Database sharding — hash-based, range-based
+
+**Month 2: Storage & Data**
+- SQL vs NoSQL — when to pick which
+- CAP theorem — CP vs AP systems
+- ACID vs BASE
+- Consistent hashing deep dive
+- Blob storage — S3 architecture
+- Data partitioning strategies
+- Indexing strategies at scale
+- Time-series data handling
+
+**Month 3: Communication & Processing**
+- Synchronous vs asynchronous communication
+- Message queues — concepts, at-least-once, exactly-once
+- Pub/Sub pattern
+- WebSockets vs polling vs SSE
+- API Gateway pattern
+- Rate limiter design
+- Circuit breaker pattern
+- Batch processing vs stream processing
+
+**Month 4: Practice Designs**
+- URL shortener (TinyURL)
+- Paste bin
+- Twitter/Instagram feed
+- Chat system (WhatsApp)
+- Notification system
+- YouTube/Netflix video streaming
+- Uber/ride sharing
+- Search autocomplete
+- Distributed cache
+- Rate limiter
+
+**For each design learn:**
+- Requirements gathering (functional + non-functional)
+- Back of envelope estimation
+- High level architecture
+- Deep dive into components
+- Bottlenecks & tradeoffs
+- Scaling discussion
+
+**Resources:**
+- Alex Xu — System Design Interview Vol 1 & Vol 2 (must read)
+- Grokking System Design (Educative)
+- System Design Primer (GitHub repo)
+- Martin Kleppmann's talks on YouTube
+
+---
+
+### 7. AWS Cloud (3 months)
+
+**Month 1: Compute & Networking**
+- EC2 — instance types, AMIs, security groups, key pairs
+- Auto Scaling Groups — policies, cooldown
+- Elastic Load Balancer — ALB vs NLB vs CLB
+- VPC — subnets (public/private), route tables, internet gateway, NAT gateway
+- Security groups vs NACLs
+- Elastic IP
+- Route 53 — DNS routing policies
+
+**Month 2: Storage & Database**
+- S3 — buckets, versioning, lifecycle policies, storage classes, presigned URLs
+- S3 event notifications
+- EBS — volume types (gp3, io2), snapshots
+- EFS — when to use vs EBS
+- RDS — Multi-AZ, read replicas, automated backups
+- DynamoDB — partition keys, sort keys, GSI, LSI, capacity modes
+- ElastiCache — Redis vs Memcached on AWS
+- Aurora basics
+
+**Month 3: Serverless, Messaging & Security**
+- Lambda — triggers, cold start, layers, concurrency
+- API Gateway — REST vs HTTP API, stages, throttling
+- SQS — standard vs FIFO, visibility timeout, dead letter queue
+- SNS — topics, subscriptions, fan-out pattern
+- EventBridge basics
+- IAM — policies, roles, least privilege, cross-account access
+- CloudWatch — logs, metrics, alarms
+- CloudFormation / Terraform basics (IaC intro)
+
+**Certification:**
+- Take AWS Solutions Architect Associate (SAA-C03)
+- Use Stephane Maarek's Udemy course
+- Practice exams on TutorialsDojo
+
+---
+
+### 8. Docker + Kubernetes (2 months)
+
+**Month 1: Docker**
+- What containers actually are (namespaces, cgroups)
+- Dockerfile — FROM, RUN, COPY, CMD, ENTRYPOINT, EXPOSE
+- Multi-stage builds (critical for production)
+- Docker Compose — multi-container apps
+- Volumes — named, bind mount
+- Networking — bridge, host, overlay
+- Image optimization — layer caching, alpine images
+- Docker registry — pushing/pulling images
+- Environment variables & secrets handling
+- Healthchecks
+- Logging — docker logs, log drivers
+
+**Month 2: Kubernetes**
+- Why K8s exists — orchestration problem
+- Architecture — control plane (API server, etcd, scheduler, controller manager), worker nodes (kubelet, kube-proxy)
+- Pods — lifecycle, multi-container pods, init containers
+- Deployments — rolling updates, rollbacks
+- Services — ClusterIP, NodePort, LoadBalancer
+- ConfigMaps & Secrets
+- Namespaces
+- Ingress & Ingress controllers (nginx)
+- Persistent Volumes & Persistent Volume Claims
+- Horizontal Pod Autoscaler
+- Resource requests & limits
+- Liveness & readiness probes
+- Helm basics — charts, values, templating
+- kubectl commands fluency
+
+**Resources:**
+- Docker official docs + practice by containerizing your Django projects
+- KodeKloud Kubernetes course (hands-on labs)
+- Kubernetes the Hard Way (Kelsey Hightower) — read, don't necessarily do
+
+---
+
+### 9. CI/CD Pipelines (1 month)
+
+**Week 1-2: GitHub Actions**
+- Workflow YAML structure
+- Triggers — push, PR, schedule, manual
+- Jobs & steps
+- Matrix builds
+- Secrets management
+- Caching dependencies
+- Building & pushing Docker images
+- Deploy to AWS (EC2/ECS/Lambda)
+
+**Week 3-4: Concepts & Jenkins Basics**
+- CI vs CD vs CD (continuous delivery vs deployment)
+- Pipeline stages — lint, test, build, deploy
+- Blue-green deployment
+- Canary deployment
+- Rolling deployment
+- Feature flags concept
+- Jenkins — Jenkinsfile, pipeline syntax, agents
+- ArgoCD basics (GitOps)
+- SonarQube — code quality gates
+
+**Practice:**
+- Build a full pipeline: push code → run tests → build Docker image → push to ECR → deploy to ECS
+
+---
+
+### 10. Redis & Caching (1 month)
+
+**Week 1-2: Redis Core**
+- Data structures — strings, lists, sets, sorted sets, hashes, streams
+- TTL & expiration
+- Pub/Sub in Redis
+- Transactions — MULTI/EXEC
+- Lua scripting basics
+- Persistence — RDB snapshots vs AOF
+- Redis Cluster — sharding, replication
+- Sentinel — high availability
+
+**Week 3-4: Caching Patterns**
+- Cache-aside (lazy loading)
+- Write-through
+- Write-behind (write-back)
+- Read-through
+- Cache invalidation strategies — TTL, event-based, versioning
+- Cache stampede / thundering herd problem
+- Hot key problem
+- Distributed caching vs local caching
+- Django cache framework — per-view, per-site, low-level cache API
+- Session storage in Redis
+- Rate limiting with Redis (sliding window counter)
+
+**Resources:**
+- Redis University (free courses)
+- Build a leaderboard, rate limiter, session store with Redis
+
+---
+
+## PHASE 3 — SENIOR TRACK (Months 14-24)
+
+---
+
+### 11. Kafka / RabbitMQ (2 months)
+
+**Month 1: Apache Kafka**
+- Why Kafka — log-based messaging
+- Architecture — brokers, topics, partitions, offsets
+- Producers — partitioning strategies, acks (0, 1, all)
+- Consumers — consumer groups, rebalancing
+- Exactly-once semantics — idempotent producers, transactional API
+- Kafka Connect — source & sink connectors
+- Schema Registry — Avro schemas
+- Retention policies — time-based, size-based, compacted topics
+- Kafka Streams basics
+- Monitoring — consumer lag, under-replicated partitions
+
+**Month 2: Event-Driven Architecture**
+- RabbitMQ basics — exchanges (direct, fanout, topic), queues, bindings
+- Kafka vs RabbitMQ — when to use which
+- Event sourcing pattern
+- CQRS (Command Query Responsibility Segregation)
+- Saga pattern for distributed transactions
+- Outbox pattern — reliable event publishing
+- Dead letter queues
+- Idempotent consumers
+- Event schema evolution
+- Building an event-driven microservice (order → payment → notification)
+
+**Resources:**
+- Confluent Kafka courses (free)
+- Kafka: The Definitive Guide (book)
+- Build a real event pipeline with Python + Kafka
+
+---
+
+### 12. Microservices Architecture (2 months)
+
+**Month 1: Design & Patterns**
+- Monolith vs microservices — actual tradeoffs (not hype)
+- Domain-Driven Design basics — bounded contexts, aggregates, entities
+- Service decomposition strategies
+- API Gateway — routing, auth, rate limiting (Kong, AWS API Gateway)
+- Service discovery — client-side vs server-side
+- Inter-service communication — sync (REST, gRPC) vs async (events)
+- gRPC — protocol buffers, streaming, when to use over REST
+- Circuit breaker pattern (resilience4j concepts)
+- Bulkhead pattern
+- Sidecar pattern
+
+**Month 2: Implementation & Operations**
+- Authentication across services — JWT propagation, service mesh
+- Distributed tracing — Jaeger, OpenTelemetry
+- Centralized logging — ELK stack across services
+- Database per service pattern
+- Shared data problems — data duplication, eventual consistency
+- API versioning in microservices
+- Contract testing — Pact
+- Service mesh intro — Istio/Linkerd concepts
+- Deployment strategies for microservices
+- Strangler fig pattern — migrating from monolith
+
+**Project:**
+- Build a 3-4 service system: User service, Order service, Payment service, Notification service
+- Use Kafka for async, REST/gRPC for sync, Docker Compose for local, K8s for deployment
+
+---
+
+### 13. Database Internals — PostgreSQL (2 months)
+
+**Month 1: Storage & Indexing**
+- How PostgreSQL stores data — pages, tuples, TOAST
+- MVCC — how concurrent reads/writes work
+- Write-Ahead Log (WAL) — crash recovery
+- Vacuum — why it exists, autovacuum tuning
+- Index types deep dive:
+  - B-tree — structure, when optimal
+  - Hash — limitations
+  - GIN — full-text search, JSONB
+  - GiST — geometric, range queries
+  - BRIN — large sequential datasets
+- Composite indexes — column ordering matters
+- Partial indexes
+- Expression indexes
+- Index-only scans
+- Bloat — table and index bloat
+
+**Month 2: Performance & Replication**
+- EXPLAIN ANALYZE — reading query plans
+- Sequential scan vs index scan vs bitmap scan
+- Join algorithms — nested loop, hash join, merge join
+- Query optimization — rewriting queries, CTEs vs subqueries performance
+- Connection pooling — PgBouncer
+- Partitioning — range, list, hash
+- Replication — streaming replication, logical replication
+- Failover & high availability — Patroni
+- Backup strategies — pg_dump, pg_basebackup, WAL archiving
+- PostgreSQL configuration tuning — shared_buffers, work_mem, effective_cache_size, max_connections
+
+**Resources:**
+- "The Internals of PostgreSQL" (free online book)
+- PostgreSQL docs (seriously, best DB docs ever written)
+- Use pgbench for load testing
+
+---
+
+### 14. Monitoring & Observability (1 month)
+
+**Week 1: Prometheus + Grafana**
+- Prometheus architecture — pull model, targets, scrape config
+- Metric types — counter, gauge, histogram, summary
+- PromQL — rate, increase, histogram_quantile
+- Alertmanager — routing, silencing, grouping
+- Grafana — dashboards, panels, variables, alerting
+- Instrumenting Python apps — prometheus_client library
+
+**Week 2: ELK Stack**
+- Elasticsearch — indexes, mappings, queries
+- Logstash — pipelines, filters, grok patterns
+- Kibana — discover, visualize, dashboards
+- Filebeat — lightweight log shipping
+- Structured logging in Python — JSON logs
+
+**Week 3: Distributed Tracing**
+- OpenTelemetry — traces, spans, context propagation
+- Jaeger — UI, trace analysis
+- Correlating logs, metrics, traces
+- SLIs, SLOs, SLAs — defining reliability targets
+
+**Week 4: Production Practices**
+- On-call basics — runbooks, escalation
+- Incident management — severity levels, postmortems
+- Dashboard design — USE method (utilization, saturation, errors), RED method (rate, errors, duration)
+- Synthetic monitoring
+- Error tracking — Sentry
+
+---
+
+### 15. Go Language (3 months)
+
+**Month 1: Fundamentals**
+- Why Go — concurrency, performance, simplicity, dominant in infra/cloud tooling
+- Types — int, string, bool, arrays, slices, maps
+- Structs & methods
+- Interfaces — implicit satisfaction (duck typing)
+- Pointers — when and why
+- Error handling — error interface, wrapping, sentinel errors
+- Packages & modules — go mod
+- Testing — go test, table-driven tests, benchmarks
+
+**Month 2: Concurrency & Advanced**
+- Goroutines — lightweight threads
+- Channels — buffered, unbuffered, directional
+- Select statement
+- sync package — WaitGroup, Mutex, RWMutex, Once
+- Context package — cancellation, timeouts, values
+- Worker pool pattern
+- Fan-in, fan-out patterns
+- Race condition detection — go run -race
+- Memory model basics
+
+**Month 3: Building Real Stuff**
+- net/http — handlers, middleware, routing
+- Gin or Chi framework
+- Building REST APIs in Go
+- Database access — database/sql, sqlx, GORM
+- gRPC services in Go
+- Dockerfile for Go apps (tiny binaries)
+- CLI tools with Cobra
+- Build a microservice in Go that talks to your Python services
+
+**Resources:**
+- Go by Example (website)
+- "Learning Go" by Jon Bodner (O'Reilly)
+- Effective Go (official docs)
+- Just build — Go rewards doing over reading
+
+---
+
+## PHASE 4 — 1 CR TERRITORY (Months 24-36)
+
+---
+
+### 16. Distributed Systems (3 months)
+
+**Month 1: Theory**
+- CAP theorem — deep understanding with real examples
+- Consistency models — strong, eventual, causal, linearizable
+- FLP impossibility result (concept)
+- Byzantine fault tolerance (concept)
+- Vector clocks & Lamport timestamps
+- Quorum — read/write quorums, sloppy quorum
+- Consistency vs availability tradeoffs in real systems
+
+**Month 2: Consensus & Coordination**
+- Paxos (conceptual understanding)
+- Raft — leader election, log replication (understand deeply)
+- ZooKeeper — what it does, use cases
+- etcd — K8s backbone
+- Distributed locking — Redlock algorithm
+- Leader election patterns
+- Split-brain problem
+
+**Month 3: Real-World Distributed Patterns**
+- Distributed transactions — 2PC, 3PC, Saga
+- Conflict-free Replicated Data Types (CRDTs)
+- Gossip protocols
+- Bloom filters
+- Merkle trees
+- Consistent hashing (implement it)
+- Read real engineering blogs:
+  - How Uber scales
+  - How Discord stores messages
+  - How Stripe handles payments
+  - How Netflix does chaos engineering
+
+**Resources:**
+- "Designing Data-Intensive Applications" by Martin Kleppmann (BIBLE — read cover to cover)
+- MIT 6.824 Distributed Systems lectures (YouTube)
+- Fly.io distributed systems challenges (hands-on)
+
+---
+
+### 17. Leadership & Ownership Skills (Ongoing)
+
+- Write RFCs (Request for Comments) — propose technical decisions in writing
+- Write ADRs (Architecture Decision Records)
+- Tech spec documents — problem, options, tradeoffs, decision
+- Code review mastery — give reviews that teach, not nitpick
+- Mentor 1-2 juniors — teaches you to articulate
+- Estimate projects — break down, identify risks, communicate timeline
+- Run sprint demos / tech talks at work
+- Stakeholder communication — translating tech to business impact
+- Build a personal brand:
+  - Blog on Medium / Hashnode (1 post per month minimum)
+  - GitHub with real projects, clean READMEs
+  - LinkedIn posts about what you're building/learning
+
+---
+
+### 18. LLD + HLD Interview Prep (2 months before each jump)
+
+**Low Level Design (LLD):**
+- SOLID principles — with real code examples
+- Design patterns:
+  - Creational — Factory, Builder, Singleton
+  - Structural — Adapter, Decorator, Proxy, Facade
+  - Behavioral — Strategy, Observer, Command, State
+- Practice problems:
+  - Parking lot
+  - Elevator system
+  - Splitwise
+  - BookMyShow
+  - Library management
+  - Chess / Tic-tac-toe
+  - Notification service
+- Class diagrams, clean interfaces, extensibility
+
+**High Level Design (HLD):**
+- Revisit Phase 2 system designs
+- Add 10 more:
+  - Google Docs (collaborative editing)
+  - Distributed job scheduler
+  - Payment system
+  - File storage (Dropbox/Google Drive)
+  - Proximity service (Yelp)
+  - Ticketmaster
+  - Web crawler
+  - News feed ranking
+  - Ad click aggregation
+  - Distributed message queue
+
+---
+
+### 19. Open Source Contributions (Ongoing)
+
+- Start with "good first issue" labels
+- Target repos you actually use — Django, FastAPI, Celery, Kubernetes, Prometheus client
+- Read contribution guidelines
+- Start small — docs fixes, test additions, bug fixes
+- Graduate to feature PRs
+- Builds credibility, networking, real codebase experience
+- Mention contributions in resume and interviews
+
+---
+
+### 20. AI/ML Engineering Basics (2 months)
+
+**Month 1: Foundation**
+- How LLMs work — transformers, attention mechanism (conceptual)
+- OpenAI API / Anthropic API — completions, chat, function calling
+- Prompt engineering — few-shot, chain of thought, system prompts
+- Token economics — context windows, pricing
+- Embeddings — what they are, vector similarity
+- Vector databases — Pinecone, Weaviate, pgvector
+
+**Month 2: Building with AI**
+- RAG (Retrieval Augmented Generation):
+  - Document chunking strategies
+  - Embedding generation
+  - Vector store indexing
+  - Retrieval + LLM generation pipeline
+- LangChain / LlamaIndex basics
+- Fine-tuning concepts (LoRA, QLoRA)
+- AI agents — tool use, function calling, multi-step reasoning
+- Guardrails — output validation, content filtering
+- Build a RAG chatbot over custom documents
+- Build an AI agent that uses tools (search, calculator, database)
+
+**Resources:**
+- Andrej Karpathy's YouTube (neural net basics)
+- DeepLearning.AI short courses (free)
+- Build real projects — RAG over your company's docs is a killer internal tool
+
+---
+
+## DAILY SCHEDULE TEMPLATE
+
+**Weekdays (2-3 hours):**
+- 1 hour — current phase primary skill (theory/reading)
+- 1 hour — coding practice (DSA early on, project building later)
+- 30 min — spaced review of previous topics
+
+**Weekends (6-8 hours):**
+- 3-4 hours — project building
+- 2 hours — system design / reading
+- 1-2 hours — blog writing / open source
+
+---
+
+## THE NON-NEGOTIABLE RULES
+
+1. **Build projects for every phase** — knowledge without projects is worthless in interviews
+2. **Never stay at a company more than 2 years** until you hit target
+3. **Interview even when you're not looking** — keeps you sharp
+4. **Network on LinkedIn and Twitter** — cold DMs work, people help
+5. **Track progress weekly** — what you learned, what you built, what's next
+6. **Sleep properly** — burnout kills more careers than lack of skill
+
+This is the whole map. Execute it.
